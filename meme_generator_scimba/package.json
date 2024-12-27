@@ -1,5 +1,5 @@
 {
-  "name": "chef_clude",
+  "name": "meme_generator_scimba",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,14 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@huggingface/inference": "^2.8.1",
-    "dotenv": "^16.4.7",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-markdown": "^9.0.1",
-    "remark-parse": "^11.0.0",
-    "remark-react": "^9.0.1",
-    "unified": "^11.0.5"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",

@@ -1,14 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 function Header() {
   return (
-    <div>
-     <header>
-        <img src="/src/chef.png" alt="dfad" />
-        <h1>Chef Claude</h1>
-     </header>
-    </div>
-  )
+    <header>
+      <img src="/src/chef.png" alt="Chef Icon" />
+      <h1>Chef Claude</h1>
+    </header>
+  );
 }
 
-export default Header
+export default Header;

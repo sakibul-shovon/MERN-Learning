@@ -1,6 +1,7 @@
-import React from 'react';
-import Header from './Header';
-import MainContent from './MainContent';
+import React from "react";
+
+import MainContent from "./MainContent";
+import Header from "./Header";
 
 function App() {
   return (
