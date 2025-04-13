@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Task</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-zinc-900 text-white min-h-screen">
+    <div class="container mx-auto py-10 px-4">
+      <!-- Task Creation Form -->
+      <div class="bg-zinc-800 p-8 rounded-2xl shadow-lg w-full max-w-md mx-auto mb-10">
+        <h2 class="text-2xl font-semibold mb-6 text-center">Create a Task</h2>
+        <form action="/create" method="post" class="space-y-5">
+          <input
+            type="text"
+            placeholder="Title goes here"
+            name="title"
+            required
+            class="w-full p-3 rounded-md bg-zinc-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+          <textarea
+            placeholder="Write your task details"
+            name="details"
+            rows="5"
+            required
+            class="w-full p-3 rounded-md bg-zinc-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          ></textarea>
+          <input
+            type="submit"
+            value="Create Task"
+            class="w-full bg-indigo-600 hover:bg-indigo-700 transition-colors p-3 rounded-md font-semibold cursor-pointer"
+          />
+        </form>
+      </div>
+
+      <!-- Task List -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+        <% if (files.length > 0) { %>
+          <% files.forEach(function(val) { %>
+            <div class="bg-zinc-800 p-5 rounded-xl shadow-md">
+              <h3 class="text-lg font-bold mb-2"><%= val.title %></h3>
+              <p class="text-sm text-zinc-400 whitespace-pre-wrap"><%= val.details %></p>
+            </div>
+          <% }) %>
+        <% } else { %>
+          <h3 class="text-zinc-500 text-center col-span-full italic">No tasks yet. Add one to get started!</h3>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>
